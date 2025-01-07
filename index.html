@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Mukta:wght@200;300;400;500;600;700;800&family=VT323&display=swap"
+        rel="stylesheet">
+    <script src="main.mjs" type="module"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>MedacDent</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="/resources/logo_medac.png" alt="logo">
+        </div>
+        <div>
+            <img src="resources/MedacDentLogo3.png" alt="medacLogo">
+        </div>
+
+    </header>
+    <nav>
+        <div class="navButtons">Home</div>
+        <div class="navButtons">Cita Previa</div>
+        <div class="navButtons">Tabla de citas</div>
+    </nav>
+    <main>
+        <div id="sectionContainer" class="section-containers">
+            <div id="formSection" class="section">
+                <form id="appointmentForm">
+                    <div id="dateSection" class="formSections">
+                        <h2 class="formTitle">Fecha y hora:</h2>
+                        <div id="appointmentDateInputGroup">
+                            <input type="date" id="appointmentDate" name="appointmentDate" class="dateInput" required>
+                            <select name="appointmentHour" class="dateInput" required></select>
+                        </div>
+                    </div>
+                    <div class="formSections">
+                        <h2 class="formTitle">Datos paciente:</h2>
+
+                        <div class="dataInputs">
+                            <div class="dataInputSection">
+                                <label for="firstName">Nombre:</label>
+                                <input type="text" name="firstName" id="firstName" required>
+                            </div>
+                            <div class="dataInputSection">
+                                <label for="surname">Apellidos:</label>
+                                <input type="text" name="surname" id="surname" required>
+                            </div>
+                            <div class="dataInputSection">
+                                <label for="DNI">DNI:</label>
+                                <input type="text" name="dni" id="DNI" pattern="\d{8}[A-Za-z]" placeholder="12345678X"
+                                    maxlength="9" title="Formato: 8 números seguidos de una letra" required>
+                            </div>
+                            <div class="dataInputSection">
+                                <label for="contact">Contacto:</label>
+                                <input type="tel" name="contact" id="contact" pattern="\d{3}\d{2}\d{2}\d{2}"
+                                    placeholder="000-00-00-00" title="Formato: 000-00-00-00" maxlength="9" required>
+                            </div>
+                        </div>
+
+                        <div class="dataInputs">
+                            <label for="birth">Fecha de Nacimiento:</label>
+                            <input type="date" name="birth" id="birth" required>
+                        </div>
+
+                        <div class="dataInputs">
+                            <label for="observations">Observaciones: </label>
+                            <textarea name="observations" id="observations"
+                                placeholder="Datos de interés..."></textarea>
+                        </div>
+
+                    </div>
+                    <label id="errorLabel">*Por favor, rellena los campos marcados en rojo</label>
+                    <div class="formButtonSection">
+                        <button id="sendButton" class="formButton">Enviar</button>
+                        <button id="cleanButton" class="formButton">Limpiar</button>
+                    </div>
+                </form>
+
+                <button class="floating-button" id="floatingButtonForm">></button>
+            </div>
+
+            <div id="buttonSection" class="section">
+                <div id="citaPreviaButton" class="centralButtons">Solicitar cita</div>
+                <div id="tableCitasButton" class="centralButtons">Consultar cita</div>
+            </div>
+
+            <div id="tableSection" class="section">
+                <div id="tableSectionGroup">
+                    <div id="tableData">
+                        <div id="searchSection">
+                            <label for="searchInput">Buscar DNI: </label>
+                            <input id="searchInput" type="text">
+                            <ul id="suggestions"></ul>
+                        </div>
+                        <table>
+                            <thead>
+                                <th>DNI</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Fecha de cita</th>
+                                <th>Hora de cita</th>
+                                <th class="tableButtons"><button id="downloadJsonButton" class="">Descargar</button></th>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="floating-button" id="floatingButtonTable">&lt;</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h2>Detalles del Registro</h2>
+                <p><strong>DNI:</strong> <span id="modaLdni" class="modalData"></span></p>
+                <p><strong>Nombre:</strong> <span id="modaLfirstName" class="modalData"></span></p>
+                <p><strong>Apellidos:</strong> <span id="modaLsurname" class="modalData"></span></p>
+                <p><strong>Fecha de Cita:</strong> <span id="modaLappointmentDate" class="modalData"></span></p>
+                <p><strong>Hora de Cita:</strong> <span id="modaLappointmentHour" class="modalData"></span></p>
+                <p><strong>Contacto:</strong> <span id="modaLcontact" class="modalData"></span></p>
+                <p><strong>Fecha de Nacimiento:</strong> <span id="modaLbirth" class="modalData"></span></p>
+                <p><strong>Observaciones:</strong> <span id="modaLobservations" class="modalData"></span></p>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>

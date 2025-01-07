@@ -1,0 +1,106 @@
+[
+  {
+    "storageKey": "12345678X-12-12-2025-09:00",
+    "data": {
+      "appointmentDate": "12-12-2025",
+      "firstName": "Perico",
+      "surname": "Palotes",
+      "dni": "12345678X",
+      "contact": "698658658",
+      "birth": "15-05-1970",
+      "appointmentHour": "09:00",
+      "observations": "Es cejijunto"
+    }
+  },
+  {
+    "storageKey": "45668946D-15-12-2025-10:00",
+    "data": {
+      "appointmentDate": "15-12-2025",
+      "firstName": "Ulises",
+      "surname": "S. Grant",
+      "dni": "45668946D",
+      "contact": "555555555",
+      "birth": "27-04-1822",
+      "appointmentHour": "10:00",
+      "observations": "No juntar con Robert E. Lee., no se llevan bien"
+    }
+  },
+  {
+    "storageKey": "88888888G-15-12-2025-11:00",
+    "data": {
+      "appointmentDate": "15-12-2025",
+      "firstName": "Robert",
+      "surname": "E Lee",
+      "dni": "88888888G",
+      "contact": "666666666",
+      "birth": "19-01-1807",
+      "appointmentHour": "11:00",
+      "observations": "Finos modales sureños, ha insistido en este día y esta hora...¿?"
+    }
+  },
+  {
+    "storageKey": "19870614F-30-01-2025-16:00",
+    "data": {
+      "appointmentDate": "30-01-2025",
+      "firstName": "Napoleon",
+      "surname": "Bonaparte",
+      "dni": "19870614F",
+      "contact": "624579535",
+      "birth": "15-08-1769",
+      "appointmentHour": "16:00",
+      "observations": "Quiere pasar a Portugal, ¿que puede salir mal?"
+    }
+  },
+  {
+    "storageKey": "19171017K-12-12-2025-12:00",
+    "data": {
+      "appointmentDate": "12-12-2025",
+      "firstName": "Leon",
+      "surname": "Davídovich",
+      "dni": "19171017K",
+      "contact": "687987799",
+      "birth": "08-11-1879",
+      "appointmentHour": "12:00",
+      "observations": "Tiene unas gafas minúsculas, es muy gracioso"
+    }
+  },
+  {
+    "storageKey": "17171717M-12-12-2025-13:00",
+    "data": {
+      "appointmentDate": "12-12-2025",
+      "firstName": "Ramón ",
+      "surname": "Mercader",
+      "dni": "17171717M",
+      "contact": "648441621",
+      "birth": "07-02-1913",
+      "appointmentHour": "13:00",
+      "observations": "Parece ser escalador..."
+    }
+  },
+  {
+    "storageKey": "78181515F-18-04-2025-13:00",
+    "data": {
+      "appointmentDate": "18-04-2025",
+      "firstName": "Alphonse Gabriel",
+      "surname": "Capone",
+      "dni": "78181515F",
+      "contact": "999999999",
+      "birth": "17-01-1899",
+      "appointmentHour": "13:00",
+      "observations": "Gracias a él la leche tiene fecha de caducidad, también hizo más cosas"
+    }
+  },
+  {
+    "storageKey": "57841646R-18-04-2025-14:00",
+    "data": {
+      "appointmentDate": "18-04-2025",
+      "firstName": "Eliot",
+      "surname": "Ness",
+      "dni": "57841646R",
+      "contact": "999999998",
+      "birth": "19-04-1903",
+      "appointmentHour": "14:00",
+      "observations": "No tocar"
+    }
+  }
+]
