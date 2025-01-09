@@ -6,8 +6,9 @@ export class ModalManager {
         this.setupCloseListeners();
     }
 
-    /*Por cada clave del objeto de extrae el campo de la modal que representa los datos
-    si existe se establece el valor, para ello he nombrado los ids de los campos de la modal
+    /*Por cada clave del objeto de extrae el campo de la modal que 
+    representa los datos si existe se establece el valor, para ello 
+    he nombrado los ids de los campos de la modal
     con la palabra modaL y el id de cada input */
     static openModal(data) {
         Object.entries(data).forEach(([key, value]) => {
@@ -18,8 +19,8 @@ export class ModalManager {
         });
         // Mostrar la modal
         this.modal.style.display = 'block';
-
     }
+    
     //Establece el los eventos de cierre de modal tanto con la X de la modal como clicando en el exterior
     static setupCloseListeners() {
         this.modalCloseButton.addEventListener('click', () => { this.modal.style.display = 'none' });

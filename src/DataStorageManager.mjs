@@ -15,7 +15,8 @@ export class DataStorageManager {
         signalManager.on('dataAdded',this.saveData.bind(this));
         signalManager.on('orderData', this.sendData.bind(this));
         signalManager.on('dataDeleted', this.deleteRow.bind(this));
-        //Promesa: cuando los datos se hayan cargado, se instanciará en el main la clase TableManager
+        /* Promesa: cuando los datos se hayan cargado,
+        se instanciará en el main la clase TableManager */
         this.dataLoaded=this.loadInitialDataFromFile();
     }
     /*Guardamos el array con los datos que vienen en forma de un objeto
@@ -28,20 +29,16 @@ export class DataStorageManager {
         const currentData = this.getData();
         currentData.push(data);
         localStorage.setItem(this.storageKey, JSON.stringify(currentData));
-        console.log('Guardando datos...'+data);
-        
-
     }
-    sendData(){
-        this.signalManager.emit('loadingData', this.getData())
-    }
-
-    /*Obtenemos el array guardado en caso de que exista o uno vacío */
-    getData() {
+      /*Obtenemos el array guardado en caso de que exista o uno vacío */
+      getData() {
         const storedData = localStorage.getItem(this.storageKey);
         return storedData ? JSON.parse(storedData) : [];
     }
 
+    sendData(){
+        this.signalManager.emit('loadingData', this.getData())
+    }
     clearData() {
         localStorage.removeItem(this.storageKey);
     }

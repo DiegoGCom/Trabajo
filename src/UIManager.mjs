@@ -37,17 +37,14 @@ export class UIManager{
         this.citaPreviaButton.addEventListener('click', ()=>{
             this.sectionContainer.style.transform= 'translateX(0vw)';
         });
-
         this.tableCitasButton.addEventListener('click', ()=>{
             this.sectionContainer.style.transform= 'translateX(-200vw)';
         });
-
         this.floatingButtons.forEach(button =>{
             button.addEventListener('click', ()=>{
                  this.sectionContainer.style.transform= 'translateX(-100vw)'; 
             });
         });
-
         this.navButtons.forEach(button=>{
             button.addEventListener('click', ()=>{
                 switch (button.innerHTML){

@@ -428,6 +428,23 @@ td {
 footer {
     box-sizing: border-box;
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #102F4B;
-    height: 6vh;
+    min-height: 6vh;
+    
+}
+footer :first-child{
+    box-sizing: border-box;
+    display: flex;
+    
+}
+
+footer div p{
+    color: #ffffff;
+    margin-right: 5em;
+    margin-left: 2em;
+}
+#repositorio{
+    color: #ffffff;
 }

@@ -96,10 +96,10 @@ export class FormManager {
             this.clientData[input.name] = input.value;
         }
     }
-    /*Se valida cada que cada input se haya rellenado correctamente */
+    /*Se valida cada que cada input se haya 
+    rellenado correctamente */
     validateInputs() {
         this.dataInputs.forEach(input => {
-
             if (!input.checkValidity()) {
                 input.classList.add('error');
                 this.isDataComplete = false;

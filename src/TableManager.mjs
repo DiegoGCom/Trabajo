@@ -72,9 +72,7 @@ export class TableManager {
     /*Creamos dos botones, uno para ver la modal con todos los datos y otro para
     eliminar el registro */
     createRowButtons(row, tableRow) {
-
         const data = row.data;
-
         /*Creamos una division en la tabla con un botón para ver los datos */
         const ver = document.createElement('td');
         const verButton = document.createElement('button');
@@ -97,19 +95,15 @@ export class TableManager {
         borrar.classList.add("tableButtons");
         borrar.appendChild(borrarButton);
 
-
         tableRow.appendChild(ver);
         tableRow.appendChild(borrar);
 
     }
 
 
-    /*Cargamos los datos desde el almacenamiento, guardamos cada clave en un 
-    Set para evitar duplicados y después representamos los datos en la tabla  */
+    /*Cargamos los datos desde el almacenamiento, se comprueba si la clave ya 
+    existe para evitar duplicados y después representamos los datos en la tabla  */
     loadData() {
-        /**
-         * @type {Array}
-         */
         this.signalManager.emit('orderData')
         if (!this.storagedData) return;
         this.storagedData.forEach(row => {
@@ -133,7 +127,6 @@ export class TableManager {
      * todo los datos
      */
     filterTable(query) {
-
         if (!query) {
             this.tableBody.querySelectorAll('tr').forEach(row => {
                 row.style.display = "";
@@ -148,7 +141,6 @@ export class TableManager {
                 row.style.display = 'none';
             }
         });
-
     }
 
     /*DEPRECATED.- Este método era utilizado para crear sugerencias con un <ul> a medida que 
